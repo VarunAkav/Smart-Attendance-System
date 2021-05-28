@@ -31,7 +31,6 @@ attendance_df[date] = 0
 for imgPath in imgPath_ls:
     # print(imgPath)
     img = cv.imread(str(imgPath),1)
-    img = cv.cvtColor(img,cv.COLOR_BGR2RGB)
 
     # Extracting the text from the image
     text = tess.image_to_string(img,lang='eng')
