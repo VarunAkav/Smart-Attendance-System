@@ -4,7 +4,6 @@
 from pathlib import Path
 import cv2 as cv
 import datetime
-from numpy.core.numeric import NaN
 import pandas as pd
 import re
 import pytesseract as tess
@@ -42,7 +41,7 @@ for imgPath in imgPath_ls:
             attendance_df.loc[i,date] = 1
 
 # Updating the excel sheet
-attendance_df.to_csv('Attendance_list.csv')
+attendance_df.to_csv('Attendance_list.csv',index=False)
 #print(attendance_df)
     # cv.imshow('Attendance list',img)
     # cv.waitKey(0)
